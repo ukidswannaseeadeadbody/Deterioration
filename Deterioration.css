@@ -1,0 +1,475 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("finalfon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  font-family: 'Oranienbaum', serif;
+  padding-top: 70px; 
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  backdrop-filter: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+  z-index: 999;
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+  overflow: visible;
+}
+
+.main-header.blurred {
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.header-block {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: dimgray;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.search-bar input {
+  padding: 10px 140px 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ddd;
+  font-size: 16px;
+  width: 220px;
+  text-align: left;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: dimgray;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.nav-links span {
+  color: #aaa;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px;
+  gap: 80px;
+  color: white;
+}
+
+.product-tribal {
+  flex-shrink: 0;
+  width: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 40px; 
+}
+
+.product-tribal img {
+  height: 500px;
+  object-fit: contain;
+}
+
+.product-content {
+  flex: 1;
+  max-width: 480px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h2,
+.product-content h2,
+.product-size,
+.product-price,
+.buy-link,
+.product-content *,
+.product-content {
+  font-family: 'Oranienbaum', serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 36px;
+  margin: 0;
+}
+
+.line {
+  font-size: 28px; 
+  color: white;
+  margin: 10px 0;
+  font-family: monospace;
+}
+
+.product-desc {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.product-desc.japanese {
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.buy-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.product-image img {
+  width: 520px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 175;
+}
+
+.size-option {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.size-option.selected {
+  color: darkred;
+}
+
+.size-option {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.size-option.selected {
+  color: red;
+  text-shadow: 0 0 5px red;
+}
+
+.buy-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: 0px;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+.buy-link:hover {
+  color: red;
+  text-shadow: 0 0 15px red;
+  letter-spacing: 8px;
+}
+
+.site-footer {
+  text-align: center;
+  margin-top: 100px;
+  padding-bottom: 40px;
+}
+
+.footer-line {
+  height: 1px;
+  width: 100%;
+  background-color: dimgray;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  color: dimgray;
+  font-size: 14px;
+  font-family: 'Oranienbaum', serif;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: dimgray;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo:hover {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  filter: drop-shadow(0 0 6px red) brightness(1.4);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.popup.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.popup-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+  width: 450px;
+  max-width: 90%;
+}
+
+/* Заголовок */
+.popup-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  color: black;
+}
+
+/* Контактні елементи */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.contact-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: dimgray;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-size: 18px;
+}
+
+.contact-item a:hover {
+  color: red;
+  text-shadow: 0 0 6px red;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: dimgray;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: red;
+  text-shadow: 0 0 6px red;
+}
+
+.footer-links span {
+  color: #aaa;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+  width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+  color: black;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.popup-title {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.popup-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.popup-content ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#privacy-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#privacy-popup.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#privacy-popup .popup-content {
+  background: white;
+  color: black;
+  width: 80%;
+  max-height: 85%;
+  padding: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Oranienbaum', serif;
+}
+
+#privacy-popup .popup-content h2 {
+  font-size: 36px;
+  margin-top: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.popup-scroll {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.popup-content h2 {
+  text-align: center;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oranienbaum', serif;
+  transition: opacity 1s ease, visibility 1s ease;
+  color: red;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: brightness(0.9);
+}
+
+.preloader-text-top {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.preloader-text-bottom {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: red;
+  animation: redFlicker 1.5s infinite;
+  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px darkred;
+}
+
+@keyframes redFlicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 10px red, 0 0 20px red; }
+  50% { opacity: 0.3; text-shadow: 0 0 2px red; }
+}
