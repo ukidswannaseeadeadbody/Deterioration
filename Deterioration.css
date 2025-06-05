@@ -473,3 +473,11 @@ h2,
   0%, 100% { opacity: 1; text-shadow: 0 0 10px red, 0 0 20px red; }
   50% { opacity: 0.3; text-shadow: 0 0 2px red; }
 }
+
+.footer-logo {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  filter: brightness(0.8);
+}
