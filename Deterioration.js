@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
   const searchInput = document.getElementById("search-input");
 
-  // <-- це вирішує твою проблему:
-  if (searchInput) searchInput.placeholder = "search///";
+  if (searchInput && (!searchInput.placeholder || searchInput.placeholder === "null")) {
+  searchInput.placeholder = "search///";
+}
 
   sizes.forEach(size => {
     size.addEventListener('click', function (e) {
