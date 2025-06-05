@@ -14,10 +14,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const preloader = document.getElementById("preloader");
   const searchInput = document.getElementById("search-input");
 
-  if (searchInput && (!searchInput.placeholder || searchInput.placeholder === "null")) {
-  searchInput.placeholder = "search///";
-}
+if (searchInput) {
+  const defaultPlaceholder = "search///";
 
+  if (
+    !searchInput.placeholder ||
+    searchInput.placeholder === "null" ||
+    searchInput.placeholder.trim() === ""
+  ) {
+    searchInput.placeholder = defaultPlaceholder;
+  }
+
+  const observer = new MutationObserver(() => {
+    if (
+      searchInput.placeholder !== defaultPlaceholder &&
+      searchInput.placeholder !== ""
+    ) {
+      searchInput.placeholder = defaultPlaceholder;
+    }
+  });
+
+  observer.observe(searchInput, { attributes: true, attributeFilter: ["placeholder"] });
+}
   sizes.forEach(size => {
     size.addEventListener('click', function (e) {
       e.preventDefault();
